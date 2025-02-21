@@ -72,7 +72,7 @@ print("{}, {}".format("Hello", "World")) # Hello, World
 print("{0}, {0}".format("Hello", "World")) # Hello, Hello
 h = "Hello"
 w = "World"
-print(f"{h}, {w}")
+print(f"{h}, {w}") # Hello, World
 ```
 
 </details>
