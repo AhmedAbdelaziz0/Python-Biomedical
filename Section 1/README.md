@@ -11,7 +11,29 @@ code) and python.
 
 1. Write python code that asks the user for his name and print `Hello <name>`
 
+<details>
+<summary>Answer</summary>
+
+```python
+name = input("Enter your name: ")
+print(f"Hello {name}")
+```
+
+</details>
+
 2. Write python code that asks the user for two floating points numbers and print their sum
+
+
+<details>
+<summary>Answer</summary>
+
+```python
+x = float(input("Enter a number: "))
+y = float(input("Enter another number: "))
+print(x + y)
+```
+
+</details>
 
 3. What is the ouput of the following code (run the code to see the output)?:
 
@@ -23,6 +45,15 @@ z = x ** 2 * y
 print(z)
 ```
 
+<details>
+<summary>Answer</summary>
+
+```
+2000
+```
+
+</details>
+
 4. What is the output of the following code (run the code to see the output)?:
 
 ```python
@@ -31,6 +62,15 @@ y = 20
 
 print(type(x), type(y))
 ```
+
+<details>
+<summary>Answer</summary>
+
+```
+<class 'str'> <class 'int'>
+```
+
+</details>
 
 5. In `print` function what does 'sep' and 'end' do?
 
@@ -41,6 +81,18 @@ print(x, y, sep=" + ", end=" = ")
 print(3)
 ```
 
+<details>
+<summary>Answer</summary>
+
+```
+1 + 2 = 3
+
+sep: separator between elements
+end: is printed at the end of the line
+```
+
+</details>
+
 6. What is the output of this code?
 
 ```python
@@ -48,6 +100,15 @@ x = "10"
 y = 'abc'
 print(x.isdigit(), y.isdigit())
 ```
+
+<details>
+<summary>Answer</summary>
+
+```
+True False
+```
+
+</details>
 
 7. Use 3 different ways of string format to print the following string:
 `remainder is <remainder> and quotient is <quotient>` use the variables x, y
@@ -77,6 +138,20 @@ print(f"{h}, {w}") # Hello, World
 
 </details>
 
+<details>
+<summary>Answer</summary>
+
+```python
+remainder = x % y
+quotient = x // y
+
+print("remainder is {} and quotient is {}".format(remainder, quotient))
+print("remainder is {0} and quotient is {1}".format(remainder, quotient))
+print(f"remainder is {remainder} and quotient is {quotient}")
+```
+
+</details>
+
 8. [challenge] What is the output of the following code, and what does it do?
 
 ```python
@@ -93,3 +168,16 @@ converted = (temperature * 9 / 5 + 32) * (1 - choice) + ((temperature - 32) * 5 
 
 print(f"Result: {converted}")
 ```
+
+<details>
+<summary>Answer</summary>
+
+```
+This code converts between celsius and fahrenheit.
+It uses choice to determine the conversion.
+Instead of using if statements,
+    it multipy the result by 1 - choice and the other by choice,
+    that way one choice will be suppressed
+```
+
+</details>
