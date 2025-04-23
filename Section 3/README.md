@@ -21,6 +21,33 @@ number_of_runs = 0
 total_time = 0
 ```
 
+<details>
+<summary>Answer</summary>
+
+```python
+total = 0
+count = 0
+
+while True:
+    number = input("Enter ")
+    if number in ['0', '']:
+        break
+
+    if number.isdigit():
+        print("Enter valid number")
+        continue
+
+    number = int(number)
+
+    total = total + number
+    count += 1
+    print(f"total {total}, count: {count}")
+
+print(total / count)
+```
+
+</details>
+
 ---
 
 ## Exercise 2: Number Cropping
@@ -37,6 +64,24 @@ bef_int_num = 2
 aft_int_num = 3
 ```
 
+<details>
+<summary>Answer</summary>
+
+```python
+fl_num = 1234.5678
+bef_int_num = 2
+aft_int_num = 3
+
+num = str(fl_num)
+left, right = num.split('.')
+left = left[bef_int_num:]
+right = right[:aft_int_num]
+num = left + '.' + right
+fl_num = float(num)
+```
+
+</details>
+
 ---
 
 ## Exercise 3: String Sorting
@@ -51,6 +96,24 @@ Write a program that:
 # Your code here
 s = "Tom Jerry Harry"
 ```
+
+<details>
+
+<summary>Answer</summary>
+
+```python
+s = "Tom Jerry Harry"
+
+names = s.split()
+
+combined = sorted(names)
+
+combined = ", ".join(combined)
+
+print(combined)
+```
+
+</details>
 
 ---
 
@@ -68,6 +131,23 @@ even_sum = 0
 odd_sum = 0
 ```
 
+<details>
+<summary>Answer</summary>
+
+```python
+sequence = [10, 20, 30, 40, 50, 60]
+even_sum = 0
+odd_sum = 0
+
+
+even_sum = sum(sequence[0::2]) # start:end:step
+odd_sum = sum(sequence[1::2])
+
+print(even_sum, odd_sum)
+```
+
+</details>
+
 ---
 
 ## Exercise 5: Simple Login System
@@ -83,6 +163,24 @@ Write a program that:
 # Your code here
 USERS = {'user1': 'password1', 'user2': 'password2'}
 ```
+
+<details>
+<summary>Answer</summary>
+
+```python
+USERS = {'user1': 'password1', 'user2': 'password2'}
+
+name = input("Username: ")
+passwd = input("Password: ")
+
+if name in USERS and passwd == USERS[name]:
+    print("Login successful")
+else:
+    print("Invalid username or password")
+
+```
+
+</details>
 
 ---
 
@@ -102,6 +200,24 @@ all_dicts = [d1, d2, d3]
 fin_di = {}
 ```
 
+<details>
+<summary>Answer</summary>
+    
+```python
+d1 = {'a': 1}
+d2 = {'a': 2}
+d3 = {'b': 3}
+all_dicts = [d1, d2, d3]
+fin_di = {}
+
+for d in all_dicts:
+    fin_di.update(d)
+
+print(fin_di)
+```
+
+</details>
+
 ---
 
 ## Exercise 7: Unique Number Counter
@@ -117,3 +233,18 @@ Write a program that:
 numbers1 = [10, 20, 30]
 numbers2 = [10, 20, 30, 10, 20, 30]
 ```
+
+<details>
+<summary>Answer</summary>
+
+```python
+numbers1 = [10, 20, 30]
+numbers2 = [10, 20, 30, 10, 20, 30]
+
+num1 = set(numbers1)
+num2 = set(numbers1)
+
+print(num1, num2)
+```
+
+</details>

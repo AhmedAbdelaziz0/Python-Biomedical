@@ -1,6 +1,6 @@
 # Sheet 7
 
-1. Make sure that numpy is installed on your device by importing numpy module, the print its version.
+1. Make sure that numpy is installed on your device by importing numpy module, then print its version.
 
 ## Creating array
 
@@ -28,40 +28,44 @@
 
 11. Print the fourth column of the array `a = np.arange(100).reshape(-1, 10)`
 
+## Join and Split
+
+12. Given arrays `a = np.arange(10).reshape(-1,2)` and `b = np.arange(10,20).reshape(-1,2)` join them together to create an array with shape `(5, 4)` and `(10, 2)`
+
 ## Casting
 
-12. Create an array of floating nubmers from `0` up to `1` with step `0.1`
+13. Create an array of floating nubmers from `0` up to `1` with step `0.1`
 
-13. Cast the following array into array of double `a = np.arange(100).reshape(-1, 10)`
+14. Cast the following array into array of double `a = np.arange(100).reshape(-1, 10)`
 
 ## Mathimatical Operations
 
-14. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
+15. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
     - `a + 1`
     - `a - 1`
     - `a * 2`
     - `a / 2`
     - `a ** 2`
 
-15. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
+16. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
     - `a > 50`
     - `a < 50`
     - `a >= 50`
 
-16. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
+17. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
     - `a + b`
     - `a - b`
     - `a * b`
     - `a / b`
 
-17. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
+18. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
     - `a > b`
     - `a < b`
     - `a >= b`
 
 ## Broadcasting
 
-18. What is the output of the following code:
+19. What is the output of the following code:
 
 ```python
 a = np.array([1,2,3]).reshape(3,1)

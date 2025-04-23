@@ -8,10 +8,14 @@ Announcements:
 
 - [x] Sheet 2 and answer is available in `Section 2` directory.
 
-- [ ] Sheet 3 is available in `Section 3` directory.
+- [x] Sheet 3 and answer is available in `Section 3` directory.
 
-- [ ] Sheet 4 is available in `Section 4` directory.
+- [x] Sheet 4 and answer is available in `Section 4` directory.
 
-- [ ] Quiz 1 and answer is available in `Quiz` directory.
+- [x] Quiz 1 and answer is available in `Quiz` directory.
 
-- [ ] Sheet 5 is available in `Section 5` directory.
+- [x] Sheet 5 and answer is available in `Section 5` directory.
+
+- [ ] Sheet 6 is available in `Section 6` directory.
+
+- [ ] Sheet 7 is available in `Section 7` directory.
