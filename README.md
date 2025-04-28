@@ -16,6 +16,6 @@ Announcements:
 
 - [x] Sheet 5 and answer is available in `Section 5` directory.
 
-- [ ] Sheet 6 is available in `Section 6` directory.
+- [x] Sheet 6 and answer is available in `Section 6` directory.
 
-- [ ] Sheet 7 is available in `Section 7` directory.
+- [x] Sheet 7 and answer is available in `Section 7` directory.
