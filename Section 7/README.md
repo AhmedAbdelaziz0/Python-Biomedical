@@ -30,7 +30,7 @@ arr = np.array([1, 2, 3])
     <summary>Answer</summary>
 
 ```python
-arr = np.array([list(range(1,100))])
+arr = np.array(list(range(1,100)))
 ```
 </details>
 
@@ -106,9 +106,11 @@ arr = arr.reshape(4,-1) # reshape with size 4 and size/4
 
 <details>
     <summary>Answer</summary>
-array has values from 0 to 100,
-it is reshaped into (-1, 10) which is equal to (100/10, 10) = (10, 10), 
-the value at row 9 and column 2 is 92
+Array has values from 0 to 100,
+
+It is reshaped into (-1, 10) which is equal to (100/10, 10) = (10, 10), 
+
+The value at row 9 and column 2 is 92
 </details>
 
 10. Print the third row of the array `a = np.arange(100).reshape(-1, 10)`
@@ -149,9 +151,31 @@ arr_5_4 = np.concatenate([a,b], axis=1) # axis = 1, col
 ```
 </details>
 
+13. Give array `a = np.arange(20)` split it into 4 arrays of the same size.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+a = np.arange(20)
+arrays = np.split(a, 4)
+```
+</details>
+
+14. Give array `a = np.arange(20)` split it into 4 arrays of size 3, 4, 5 and 8.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+a = np.arange(20)
+arrays = np.split(a, [3, 7, 12])
+```
+</details>
+
 ## Casting
 
-13. Create an array of floating nubmers from `0` up to `1` with step `0.1`
+14. Create an array of floating nubmers from `0` up to `1` with step `0.1`
 
 <details>
     <summary>Answer</summary>
@@ -161,7 +185,7 @@ f = np.arange(11) / 10
 ```
 </details>
 
-14. Cast the following array into array of double `a = np.arange(100).reshape(-1, 10)`
+15. Cast the following array into array of double `a = np.arange(100).reshape(-1, 10)`
 
 <details>
     <summary>Answer</summary>
@@ -175,7 +199,7 @@ a = a.astype(np.double)
 
 ## Mathimatical Operations
 
-15. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
+16. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
     - `a + 1`
     - `a - 1`
     - `a * 2`
@@ -187,7 +211,7 @@ a = a.astype(np.double)
 try it yourself and see the result.
 </details>
 
-16. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
+17. Given array `a = np.arange(100).reshape(-1, 10)` perform the following operations:
     - `a > 50`
     - `a < 50`
     - `a >= 50`
@@ -197,7 +221,7 @@ try it yourself and see the result.
 try it yourself and see the result.
 </details>
 
-17. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
+18. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
     - `a + b`
     - `a - b`
     - `a * b`
@@ -208,7 +232,7 @@ try it yourself and see the result.
 try it yourself and see the result.
 </details>
 
-18. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
+19. Given array `a = np.array([1,2,3])` and `b = np.array([4,5,6])` perform the following operations:
     - `a > b`
     - `a < b`
     - `a >= b`
@@ -220,7 +244,7 @@ try it yourself and see the result.
 
 ## Broadcasting
 
-19. What is the output of the following code:
+20. What is the output of the following code:
 
 ```python
 a = np.array([1,2,3]).reshape(3,1)
