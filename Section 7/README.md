@@ -1,4 +1,4 @@
-# Sheet 7
+# Sheet 7 [See Video](https://drive.google.com/file/d/1o7NPnFjqZKMAINaGU_sUUWq6w5U9MWL0/view?usp=sharing)
 
 1. Make sure that numpy is installed on your device by importing numpy module, then print its version.
 
