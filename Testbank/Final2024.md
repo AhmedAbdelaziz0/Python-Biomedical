@@ -7,13 +7,13 @@ Trace the following segment of code and show the outputs. **(3 points each)**
 ```python
 numbers = [12, 75, 150, 180, 145, 525, 50]
 
-for num in numbers:
-    if num > 500:
+for item in numbers:
+    if item > 500:
         break
-    if num > 150:
+    elif item > 150:
         continue
     # check if number is divisible by 5
-    if num % 5 == 0:
+    elif item % 5 == 0:
         print(item)
 ```
 
