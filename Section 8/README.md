@@ -88,7 +88,7 @@ plt.plot(a, b)
 plt.show()
 ```
 
-6. Draw two lines, (0,0) to (2,2) and (2,3) to (2,5).
+6. Draw two lines, (0,0) to (2,2) and (2,2) to (3,5).
 The first with width 10 and blue.
 The other is red.
 
