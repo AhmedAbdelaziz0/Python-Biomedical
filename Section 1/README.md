@@ -1,12 +1,38 @@
 # Sheet 1
 
-The target of this sheet is to get familiar with your IDE (such as spyder or vs
-code) and python.
+The target of this sheet is to get familiar with your IDE (such as spyder or vs code) and python.
 
 - Input/Output
 - Variables, types, casting
 - Operators
 - Strings
+
+## Indentation
+
+In any programming language there is a way to define the start and end of a
+coding block, for example in C++ it was curly brackets `{}`.
+In python it is the indentation, line that are aligned are togather.
+
+Lets see an example of finding if a number is even or odd:
+
+```python
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False
+
+num = input("Enter a number")
+if is_even(num):
+    print("The number you entered is even")
+else:
+    print("The number you entered is odd")
+```
+
+> Note that a single space will give you indentation error so copy and pasting is not adviced.
+> also spaces ` ` are not the same as tabs, when you want to make indentation use tab button on your keyboard.
+
+---
 
 
 1. Write python code that asks the user for his name and print `Hello <name>`
