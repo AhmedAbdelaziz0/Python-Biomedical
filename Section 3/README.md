@@ -80,7 +80,3 @@ while True:
 6. **Return Book:** When the user selects `5`, find the book by its ISBN and **add 1** to the number of available copies.
 7. **Search by Author:** When the user selects `6`, find all books associated with a specific author. (Hint: One author may have multiple books in the system).
 8. **Exit:** If the user selects `7`, break the loop to close the program.
-
----
-
-Would you like me to provide a code template to help you get started with the dictionary and tuple structure?
