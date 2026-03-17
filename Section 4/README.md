@@ -134,7 +134,67 @@ s = set ( c for name in names for c in name )
 
 ## Functions
 
-1. What is the output of the following code?
+1. Write a function `norm` that takes a list and return a normalized list,
+   normaliztion include subtract the mean (average) from all the values and
+   devide by standard deviation.
+    ```python
+    # return the average of the list, average = sum of list / number of elements
+    def average(numbers):
+        pass
+    
+    # return the standard deviation of the list:
+    # sum( (x_i - average(x))^2 ) / length(x)
+    # std = sqrt( sum( (x_i - average(x))^2 ) / length(x) )
+    def get_std(numbers):
+        pass
+
+
+    # nums = (nums - average) / std
+    def norm(numbers):
+        pass
+
+    nums = [1,2,3,4,5]
+    normalized_nums = norm(nums)
+
+    print(normalized_nums)
+    ```
+<details>
+<summary>Answer</summary>
+    ```python
+    # return the average of the list, average = sum of list / number of elements
+    def average(numbers):
+        return sum(numbers) / len(numbers)
+
+    # return the standard deviation of the list:
+    # sum( (x_i - average(x))^2 ) / length(x)
+    # std = sqrt( sum( (x_i - average(x))^2 ) / length(x) )
+    def get_std(numbers):
+        mean = average(numbers)
+        #s = 0
+        #for x in numbers:
+        #    s += (x - mean) ** 2
+        s = sum([(x - mean) ** 2 for x in numbers])
+        
+        s /= len(numbers)
+        return s ** 0.5
+
+    # nums = (nums - average) / std
+    def norm(numbers):
+        mean = average(numbers)
+        std = get_std(numbers)
+
+        return [(num - mean) / std for num in numbers]
+
+    nums = [1,2,3,4,5]
+    normalized_nums = norm(nums)
+
+    print(normalized_nums)
+    ```
+
+</details>
+
+
+2. What is the output of the following code?
 
    ```python
    def modlist(lst):
@@ -162,7 +222,7 @@ s = set ( c for name in names for c in name )
 </details>
 
 
-2. Write a function that finds the average of a list of numbers passed as arguments.
+3. Write a function that finds the average of a list of numbers passed as arguments.
 
 ```python
 def average(*numbers):
@@ -182,7 +242,7 @@ print(avg)
 
 </details>
 
-3. Write a function that substitutes variables into a mathematical equation
+4. Write a function that substitutes variables into a mathematical equation
    written as a string.
     ```python
     def substitute(equation, **kwargs):
