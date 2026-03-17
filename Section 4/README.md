@@ -50,6 +50,7 @@ it will create a tuple of elements from each of the iterables.
     nums = [1.1, 2.8, 3.9, 4.4414, 85.134, -14.143]
     nums = list(map(int, nums))
     ```
+
 </details>
 
 ---
@@ -64,11 +65,12 @@ it will create a tuple of elements from each of the iterables.
 
 <details>
 <summary>Answer</summary>
-```python
-x = [1, 2, 10, 13, 1]
+    ```python
+    x = [1, 2, 10, 13, 1]
 
-print([True if num % 2 == 0 else False for num in x])
-```
+    print([True if num % 2 == 0 else False for num in x])
+    ```
+
 </details>
 
 
@@ -79,12 +81,14 @@ print([True if num % 2 == 0 else False for num in x])
     nums = [134.1414, 12.412, 1, 415.3, -134.111]
     # output: [134.14, 12.41, 1.00, 415.30, -134.11]
    ```
+
 <details>
 <summary>Answer</summary>
-```python
-nums = [134.1414, 12.412, 1, 415.3, -134.111]
-s = ", ".join(f"{i:.2f}" for i in nums)
-```
+    ```python
+    nums = [134.1414, 12.412, 1, 415.3, -134.111]
+    s = ", ".join(f"{i:.2f}" for i in nums)
+    ```
+
 </details>
 
 
@@ -94,12 +98,11 @@ find which letters are used in your family members’ names.
 
 <details>
 <summary>Answer</summary>
+    ```python
+    names = ["ahmed", "ali", "mohamed"]
 
-```python
-names = ["ahmed", "ali", "mohamed"]
-
-s = set ( c for name in names for c in name )
-```
+    s = set ( c for name in names for c in name )
+    ```
 
 <bold>We can write nested comprehension as follows:</bold>
 
@@ -181,24 +184,22 @@ print(avg)
 
 3. Write a function that substitutes variables into a mathematical equation
    written as a string.
-
-```python
-def substitute(equation, **kwargs):
-    pass
-```
+    ```python
+    def substitute(equation, **kwargs):
+        pass
+    ```
 
 <details>
 <summary>Answer</summary>
+    ```python
+    def substitute(equation, **kwargs):
+        for k, v in kwargs.items():
+            equation = equation.replace(k, str(v))
+        return equation
 
-```python
-def substitute(equation, **kwargs):
-    for k, v in kwargs.items():
-        equation = equation.replace(k, str(v))
-    return equation
-
-equation = "2 * x + y"
-e = substitute(equation, x=3, y=4)
-print(e)
-```
+    equation = "2 * x + y"
+    e = substitute(equation, x=3, y=4)
+    print(e)
+    ```
 
 </details>
