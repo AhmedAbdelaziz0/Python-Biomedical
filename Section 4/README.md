@@ -1,58 +1,92 @@
 # Sheet 4
 
-1. Write a function that generate a random password, you can use `random`
-   package with `random.choice` function
+## range, zip and map
 
-   Your function should take the length of the password and the characters needed
-   in the password as arguments.
-
-```python
-def generate_password(length, chars):
-    pass
-
-generate_password(8, "abcde")
-```
+1. Generate the following lists using the `range` function:
+   - `[0, 1, 2, 3, 4, 5]`
+   - `[4, 6, 8, 10]`
+   - `[10, 9, 8, 7, 6]`
+   - `[10, 5, 0, -5, -10]`
 
 <details>
 <summary>Answer</summary>
 
 ```python
-import random
-
-def generate_password(length, chars):
-    return "".join(random.choice(chars) for _ in range(length))
-
-passwd = generate_password(8, "abcde")
-print(passwd)
+list(range(6))
+list(range(4, 11, 2))
+list(range(10, 5, -1))
+list(range(10, -11, -5))
 ```
 
 </details>
 
-2. Use comperehension to generate a string of characters that contains, all
-   characters (upper and lower), digits.
+2. What is the output of the following code, and explain the rule of the `zip` function?
+   ```python
+   x_coor = [1, 2, 3, 4, 5]
+   y_coor = [2, 4, 6, 8, 10]
+   z_coor = [0, -1, -2, -3, -4]
 
-   you can use: `ord`, `chr` and `join` functions.
-   see `help(ord)`
+   points = [(x, y, z) for x, y, z in zip(x_coor, y_coor, z_coor)]
+   ```
 
 <details>
 <summary>Answer</summary>
 
-```python
-s = "".join(
-    chr(c)
-    for c in list(range(ord("a"), ord("z") + 1))
-    + list(range(ord("A"), ord("Z") + 1))
-    + list(range(ord("0"), ord("9") + 1))
-)
+```
+zip function is used to create an iterator that combines elements from two or more iterables.
+it will create a tuple of elements from each of the iterables.
 ```
 
+</details>
+
+
+3. Write a single line using `map` that convert a list of floating point numbers to int
+    ```python
+    nums = [1.1, 2.8, 3.9, 4.4414, 85.134, -14.143]
+    ```
+<details>
+<summary>Answer</symmary>
+    ```python
+    nums = [1.1, 2.8, 3.9, 4.4414, 85.134, -14.143]
+    nums = list(map(int, nums))
+    ```
+</details>
+
+---
+
+## shorthand if-else, comprehension
+
+1. Using shorthand if-else and list comprehension, generate a list indicating whether the corresponding number in the other list is even.
+   ```python
+   x = [1, 2, 10, 13, 1]
+   # output = [False, True, True, False, False]
+   ```
+
+<details>
+<summary>Answer</summary>
 ```python
-# another way
-s = "".join( chr(ord('a') + i) for i in range(26) )
-s += s.upper()
-s += "".join( chr(ord('0') + i) for i in range(10) )
+x = [1, 2, 10, 13, 1]
+
+print([True if num % 2 == 0 else False for num in x])
 ```
 </details>
+
+
+2. Given a list of float numbers, combine them into a single string with comma
+   sperating between them, each number should be 2 digit at maximum after
+   decimal point.
+   ```python
+    nums = [134.1414, 12.412, 1, 415.3, -134.111]
+    # output: [134.14, 12.41, 1.00, 415.30, -134.11]
+   ```
+<details>
+<summary>Answer</summary>
+```python
+nums = [134.1414, 12.412, 1, 415.3, -134.111]
+s = ", ".join(f"{i:.2f}" for i in nums)
+```
+</details>
+
 
 3. Create a list whose elements are strings, the names of people in your family.
 Now use a set comprehension (and, better yet, a nested set comprehension) to
@@ -93,7 +127,39 @@ s = set ( c for name in names for c in name )
 
 </details>
 
-4. Write a function that finds the average of a list of numbers passed as arguments.
+---
+
+## Functions
+
+1. What is the output of the following code?
+
+   ```python
+   def modlist(lst):
+       for i in range(len(lst)):
+           lst[i] = 10 * lst[i]
+
+   def modvar(num):
+       num += 10
+
+   lst = [1, 2, 3]
+   modlist(lst)
+   print(lst)
+
+   x = 0
+   modvar(x)
+   print(x)
+   ```
+
+<details>
+<summary>Answer</summary>
+```
+[10, 20, 30]
+0
+```
+</details>
+
+
+2. Write a function that finds the average of a list of numbers passed as arguments.
 
 ```python
 def average(*numbers):
@@ -113,7 +179,7 @@ print(avg)
 
 </details>
 
-5. Write a function that substitutes variables into a mathematical equation
+3. Write a function that substitutes variables into a mathematical equation
    written as a string.
 
 ```python

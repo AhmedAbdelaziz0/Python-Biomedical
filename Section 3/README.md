@@ -30,7 +30,7 @@ We want to build a library management system based on the following requirements
 
 2. **Main Storage:** Use a **Dictionary** to store all information.
 * **Key:** ISBN (string).
-* **Value:** A **Tuple** containing the Title, Author, Year, and Copies (remember that order matters in a tuple).
+* **Value:** A **List** containing the Title, Author, Year, and Copies (remember that order matters in a list).
 
 
 3. **Search Helpers:**
