@@ -160,36 +160,37 @@ s = set ( c for name in names for c in name )
     ```
 <details>
 <summary>Answer</summary>
-    ```python
-    # return the average of the list, average = sum of list / number of elements
-    def average(numbers):
-        return sum(numbers) / len(numbers)
 
-    # return the standard deviation of the list:
-    # sum( (x_i - average(x))^2 ) / length(x)
-    # std = sqrt( sum( (x_i - average(x))^2 ) / length(x) )
-    def get_std(numbers):
-        mean = average(numbers)
-        #s = 0
-        #for x in numbers:
-        #    s += (x - mean) ** 2
-        s = sum([(x - mean) ** 2 for x in numbers])
-        
-        s /= len(numbers)
-        return s ** 0.5
+```python
+# return the average of the list, average = sum of list / number of elements
+def average(numbers):
+    return sum(numbers) / len(numbers)
 
-    # nums = (nums - average) / std
-    def norm(numbers):
-        mean = average(numbers)
-        std = get_std(numbers)
+# return the standard deviation of the list:
+# sum( (x_i - average(x))^2 ) / length(x)
+# std = sqrt( sum( (x_i - average(x))^2 ) / length(x) )
+def get_std(numbers):
+    mean = average(numbers)
+    #s = 0
+    #for x in numbers:
+    #    s += (x - mean) ** 2
+    s = sum([(x - mean) ** 2 for x in numbers])
+    
+    s /= len(numbers)
+    return s ** 0.5
 
-        return [(num - mean) / std for num in numbers]
+# nums = (nums - average) / std
+def norm(numbers):
+    mean = average(numbers)
+    std = get_std(numbers)
 
-    nums = [1,2,3,4,5]
-    normalized_nums = norm(nums)
+    return [(num - mean) / std for num in numbers]
 
-    print(normalized_nums)
-    ```
+nums = [1,2,3,4,5]
+normalized_nums = norm(nums)
+
+print(normalized_nums)
+```
 
 </details>
 
@@ -215,10 +216,12 @@ s = set ( c for name in names for c in name )
 
 <details>
 <summary>Answer</summary>
+
 ```
 [10, 20, 30]
 0
 ```
+
 </details>
 
 
@@ -251,15 +254,16 @@ print(avg)
 
 <details>
 <summary>Answer</summary>
-    ```python
-    def substitute(equation, **kwargs):
-        for k, v in kwargs.items():
-            equation = equation.replace(k, str(v))
-        return equation
 
-    equation = "2 * x + y"
-    e = substitute(equation, x=3, y=4)
-    print(e)
-    ```
+```python
+def substitute(equation, **kwargs):
+    for k, v in kwargs.items():
+        equation = equation.replace(k, str(v))
+    return equation
+
+equation = "2 * x + y"
+e = substitute(equation, x=3, y=4)
+print(e)
+```
 
 </details>
