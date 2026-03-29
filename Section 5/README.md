@@ -83,15 +83,41 @@ print(r)
 
 </details>
 
-3. Using short hand if: write single statement that print whether a number `A`
-   is even.
+3. Using short hand if: write single statement that print whether a string `A`
+   contain numeric value.
+
+<details>
+<summary>Answer</summary>
+
+```python
+if A.isnumeric(): print(f"{A} is a number")
+```
+
+</details>
 
 4. What is the output of the following code:
 ```python
 lst = [i ** 2 for i in range(10)]
 for idx, value in enumerate(lst):
-    print(f"{i} - {value}")
+    print(f"{idx} - {value}")
 ```
 
+<details>
+<summary>Answer</summary>
+
+```
+0 - 0
+1 - 1
+2 - 4
+3 - 9
+4 - 16
+5 - 25
+6 - 36
+7 - 49
+8 - 64
+9 - 81
+```
+
+</details>
 
 5. Convert the Library system into single class.
