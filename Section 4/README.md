@@ -46,6 +46,7 @@ it will create a tuple of elements from each of the iterables.
     ```
 <details>
 <summary>Answer</symmary>
+
     ```python
     nums = [1.1, 2.8, 3.9, 4.4414, 85.134, -14.143]
     nums = list(map(int, nums))
