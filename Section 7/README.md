@@ -260,3 +260,42 @@ array `a` and `b` are reshaped to match each other,
 `a` will be `3x3` by repeating first column,
 `b` will be `3x3` by repeating first row.
 </details>
+
+## Searching & Filter
+
+21. Given array `a = np.arange(10)`, write single line that changes all odd numbers to
+    the value `0` (zero)
+
+<details>
+<summary>Answer</summary>
+
+```python
+a[np.where( a % 2 )] = 0
+```
+
+</details>
+
+
+## NumPy ufunc
+
+22. Use numpy ufunc to apply the following operation `(a-b) ** c`
+
+<details>
+<summary>Answer</summary>
+
+```python
+import numpy as np
+
+# assume a, b, c are defined
+# a = np.arange(3)
+# b = np.arange(3)
+# c = np.arange(3)
+
+def myfunc(x, y, z):
+    return (x - y) ** z
+
+ufunc = np.frompyfunc(myfunc, 3, 1)
+ufunc(a, b, c)
+```
+
+</details>
