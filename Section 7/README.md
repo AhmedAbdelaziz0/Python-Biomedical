@@ -299,3 +299,34 @@ ufunc(a, b, c)
 ```
 
 </details>
+
+## Random
+
+23. Generate random array of int with size (5, 7) from 0 to 1000.
+
+24. Give array `arr` write single line that select a number from `arr` randomly.
+
+25. Permute the array `arr`.
+
+## Arthmatic
+
+26. What is the output of the following code:
+
+```python
+import numpy as np
+arr = np.arange(9).reshape(3,-1).T
+print(arr)
+```
+
+27. What is the output of the following code:
+
+```python
+import numpy as np
+
+a = np.arange(9).reshape(3,-1)
+b = np.arange(9).reshape(3,-1)
+if np.all(np.matmul(a,b) == np.multiply(a,b)):
+    print("Equal")
+else:
+    print("Not equal")
+```
