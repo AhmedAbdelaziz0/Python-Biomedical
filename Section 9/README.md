@@ -19,6 +19,19 @@ print(s)
 
 2. Print the rows with index 2, 20, 40 from Q1.
 
+<details>
+    <summary>Answer</summary>
+
+```python
+import pandas as pd
+
+lst = list(range(101))
+
+s = pd.Series(lst)
+print(s[[2,20,40]])
+```
+</details>
+
 3. Create Series with values 15, 20, 18 and index 'a', 'b', 'c'.
 
 <details>
